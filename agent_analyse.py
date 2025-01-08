@@ -44,6 +44,7 @@ def create_chain(vectorStore):
     chain = create_stuff_documents_chain(
         llm=model,
         prompt=prompt
+        
     )
 
     retriever = vectorStore.as_retriever(search_kwargs={"k":1})
